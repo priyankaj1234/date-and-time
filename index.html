@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date And Time</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>Multiple Time-Zone Display    </h1>
+
+    <div class="timebox">
+        <h1>India</h1>
+        <p id="indiaTime"></p>
+
+    </div>
+
+    <div class="timebox">
+    
+        <h1>Paris</h1>
+        <p id="parisTime"></p>
+
+    </div>
+
+    <div class="timebox">
+        
+        <h1>London</h1>
+        <p id="londonTime"></p>
+
+    </div>
+
+    <div class="timebox">
+        
+        <h1>New Tork</h1>
+        <p id="nyTime"></p>
+
+    </div>
+
+    <script>
+        var getIndiaTime = function(){
+            document.getElementById("indiaTime").innerHTML= new Date().toLocaleTimeString("en-US",{timeZone : 
+                'Asia/Kolkata',timeStyle : 'medium', hourCycle : 'h24'});
+        }
+        getIndiaTime();
+        setInterval(getIndiaTime,1000)
+
+        var getLondonTime = function(){
+            document.getElementById("londonTime").innerHTML= new Date().toLocaleTimeString("en-US",{timeZone : 
+                'Europe/London',timeStyle : 'medium', hourCycle : 'h24'});
+        }
+        getLondonTime();
+        setInterval(getLondonTime,1000)
+
+        var getnyTime = function(){
+            document.getElementById("nyTime").innerHTML= new Date().toLocaleTimeString("en-US",{timeZone : 
+                'America/New_york',timeStyle : 'medium', hourCycle : 'h24'});
+        }
+        getnyTime();
+        setInterval(getnyTime,1000)
+
+        var getparisTime = function(){
+            document.getElementById("parisTime").innerHTML= new Date().toLocaleTimeString("en-US",{timeZone : 
+                'Europe/Paris',timeStyle : 'medium', hourCycle : 'h24'});
+        }
+        getparisTime();
+        setInterval(getparisTime,1000)
+
+    </script>
+    
+</body>
+</html>

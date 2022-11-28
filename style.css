@@ -1,0 +1,26 @@
+.timebox{
+    border: 2px solid #f00;
+    border-radius: 5px;
+    height: 180px;
+    width: 180px;
+    display: inline-block;
+   
+}
+.timebox :hover{
+    background-color: rgb(159, 248, 159);
+}
+.timebox h1{
+    text-align: center;
+}
+
+.timebox p{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+body{
+    align-items: center;
+}
